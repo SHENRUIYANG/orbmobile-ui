@@ -1,3 +1,1 @@
-export * from './usePadLayout';
-export * from './usePadRecordEditor';
-
+export { usePadLayout, type UsePadLayoutReturn, type PadOrientation } from './usePadLayout';

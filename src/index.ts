@@ -1,20 +1,37 @@
-// src/index.ts
-export * from './components/Navigation-Island/navigation-island';
-export * from './components/Navigation-Island/tree-menu';
-export * from './components/Navigation-Island/button';
-export * from './components/Navigation-Island/Hooks/use-navigation-island';
-export * from './components/Molecules/CMessageBox';
+/**
+ * orbmobile-ui — React Native UI component library.
+ *
+ * Sibling of orbcafe-ui (web), providing the same visual identity and
+ * component vocabulary for React Native / Expo apps.
+ */
+
+// ── Atoms ──────────────────────────────────────────────────────────────
+export * from './components/Atoms';
+
+// ── Molecules ──────────────────────────────────────────────────────────
+export * from './components/Molecules';
+
+// ── WebView Bridge ─────────────────────────────────────────────────────
+export * from './components/WebViewBridge';
+
+// ── Standard Report ────────────────────────────────────────────────────
 export * from './components/StdReport';
-export * from './components/GraphReport';
-export * from './components/CustomizeAgent';
-export * from './components/DetailInfo';
+
+// ── Kanban ─────────────────────────────────────────────────────────────
 export * from './components/Kanban';
-export * from './components/PageLayout';
+
+// ── Pivot Table ────────────────────────────────────────────────────────
 export * from './components/PivotTable';
-export * from './components/Pad';
-export * from './components/AINav';
+
+// ── Agent UI ───────────────────────────────────────────────────────────
 export * from './components/AgentUI';
+
+// ── Pad (native touch components) ──────────────────────────────────────
+export * from './components/Pad';
+
+// ── i18n ───────────────────────────────────────────────────────────────
 export * from './i18n';
-export * from './lib/renderer/md_renderer';
-export * from './lib/transitions';
-export * from './lib/message';
+
+// ── Config & Utilities ─────────────────────────────────────────────────
+export * from './config';
+export * from './lib';

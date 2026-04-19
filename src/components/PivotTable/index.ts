@@ -1,4 +1,1 @@
-export * from './CPivotTable';
-export * from './types';
-export * from './Hooks/usePivotTable';
-export * from './PivotChart';
+export { CPivotTable, type CPivotTableProps } from './CPivotTable';

@@ -1,59 +1,26 @@
-'use client';
+import { useWindowDimensions } from 'react-native';
 
-import { useEffect, useMemo, useState } from 'react';
-import { useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import type { POrientation } from '../types';
+export type PadOrientation = 'portrait' | 'landscape';
 
-export interface UsePadLayoutOptions {
-  orientation?: POrientation;
-  defaultNavigationOpen?: boolean;
-  onNavOpenChange?: (open: boolean) => void;
+export interface UsePadLayoutReturn {
+  /** Current device orientation */
+  orientation: PadOrientation;
+  /** Screen width */
+  width: number;
+  /** Screen height */
+  height: number;
+  /** Whether the screen is wide enough to show a side panel */
+  showSidePanel: boolean;
 }
 
-export interface UsePadLayoutResult {
-  resolvedOrientation: Exclude<POrientation, 'auto'>;
-  isPortraitViewport: boolean;
-  isCompactViewport: boolean;
-  navigationOpen: boolean;
-  setNavigationOpen: (open: boolean) => void;
-  toggleNavigationOpen: () => void;
+/**
+ * Pad layout hook – detects orientation and provides layout hints for
+ * adaptive pad interfaces.
+ */
+export function usePadLayout(sidePanelBreakpoint = 768): UsePadLayoutReturn {
+  const { width, height } = useWindowDimensions();
+  const orientation: PadOrientation = width >= height ? 'landscape' : 'portrait';
+  const showSidePanel = width >= sidePanelBreakpoint;
+
+  return { orientation, width, height, showSidePanel };
 }
-
-export const usePadLayout = ({
-  orientation = 'auto',
-  defaultNavigationOpen,
-  onNavOpenChange,
-}: UsePadLayoutOptions = {}): UsePadLayoutResult => {
-  const theme = useTheme();
-  const isPortraitViewport = useMediaQuery('(orientation: portrait)', { noSsr: true });
-  const isCompactViewport = useMediaQuery(theme.breakpoints.down('md'), { noSsr: true });
-
-  const resolvedOrientation = useMemo<Exclude<POrientation, 'auto'>>(
-    () => (orientation === 'auto' ? (isPortraitViewport || isCompactViewport ? 'portrait' : 'landscape') : orientation),
-    [isCompactViewport, isPortraitViewport, orientation],
-  );
-
-  const [navigationOpen, setNavigationOpenState] = useState(defaultNavigationOpen ?? resolvedOrientation === 'landscape');
-
-  useEffect(() => {
-    setNavigationOpenState(defaultNavigationOpen ?? resolvedOrientation === 'landscape');
-  }, [defaultNavigationOpen, resolvedOrientation]);
-
-  const setNavigationOpen = (open: boolean) => {
-    setNavigationOpenState(open);
-    onNavOpenChange?.(open);
-  };
-
-  const toggleNavigationOpen = () => setNavigationOpen(!navigationOpen);
-
-  return {
-    resolvedOrientation,
-    isPortraitViewport,
-    isCompactViewport,
-    navigationOpen,
-    setNavigationOpen,
-    toggleNavigationOpen,
-  };
-};
-

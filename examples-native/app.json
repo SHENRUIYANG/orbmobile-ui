@@ -2,7 +2,7 @@
   "expo": {
     "name": "examples-native",
     "slug": "examples-native",
-    "scheme": "dousha",
+    "scheme": "orbmobile",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
@@ -26,9 +26,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      "@react-native-community/datetimepicker"
-    ]
+    }
   }
 }
