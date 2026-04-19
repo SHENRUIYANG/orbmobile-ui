@@ -1,4 +1,3 @@
-import { useState, useCallback } from 'react';
 import { useWindowDimensions } from 'react-native';
 
 export type PadOrientation = 'portrait' | 'landscape';

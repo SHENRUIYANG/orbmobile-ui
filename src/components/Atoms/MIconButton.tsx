@@ -5,8 +5,6 @@ import {
   type ViewStyle,
   type TouchableOpacityProps,
 } from 'react-native';
-import { BRAND_COLORS, RADIUS, SPACING } from '../../config/foundations';
-
 export type MIconButtonSize = 'small' | 'medium' | 'large';
 
 export interface MIconButtonProps extends Omit<TouchableOpacityProps, 'style'> {

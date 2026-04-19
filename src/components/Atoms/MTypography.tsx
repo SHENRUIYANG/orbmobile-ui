@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, type TextStyle } from 'react-native';
+import { Text, type TextStyle } from 'react-native';
 import { BRAND_COLORS, FONT_SIZE, FONT_WEIGHT } from '../../config/foundations';
 
 export type MTypographyVariant =
@@ -65,5 +65,3 @@ export const MTypography: React.FC<MTypographyProps> = ({
     {children}
   </Text>
 );
-
-const _styles = StyleSheet.create({}); // kept for future extensions
