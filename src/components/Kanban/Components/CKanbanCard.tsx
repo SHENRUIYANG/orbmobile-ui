@@ -3,7 +3,7 @@
 import { Avatar, Box, Chip, LinearProgress, Paper, Stack, Typography } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import type { CKanbanCardProps, KanbanCardPriority, KanbanCardTone } from '../types';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 const toneToPaletteColor: Record<Exclude<KanbanCardTone, 'default'>, 'success' | 'warning' | 'info' | 'error'> = {
   success: 'success',
@@ -47,7 +47,7 @@ const getInitials = (name?: string) => {
 };
 
 export const CKanbanCard = ({ card, bucket, dragging = false, overlay = false, onClick, sx }: CKanbanCardProps) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const interactive = Boolean(onClick && bucket);
   const tone: KanbanCardTone = card.tone ?? (card.priority ? priorityToTone[card.priority] : 'default');
   const paletteColor = tone === 'default' ? 'primary' : toneToPaletteColor[tone];

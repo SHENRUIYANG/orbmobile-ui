@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { CStandardPageProps } from '../CStandardPage';
 import type { GraphReportConfig } from '../../GraphReport/types';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 import type { IVariantService } from '../CVariantManager';
 import { resolveVariantFilters, resolveVariantLayout } from '../Utils/variantUtils';
 
@@ -63,7 +63,7 @@ export const useStandardReport = ({
     serviceUrl,
     variantService,
 }: UseStandardReportOptions) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const [loading, setLoading] = useState(false);
     const [rows, setRows] = useState<any[]>([]);
     const [filters, setFilters] = useState<Record<string, any>>({});

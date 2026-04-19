@@ -7,7 +7,7 @@ import { NavigationIsland } from '../Navigation-Island/navigation-island';
 import { CAppHeader } from './Components/CAppHeader';
 import { usePageLayout } from './Hooks/usePageLayout';
 import type { CAppPageLayoutProps } from './types';
-import { OrbcafeI18nProvider } from '../../i18n';
+import { OrbmobileI18nProvider } from '../../i18n';
 
 export const CAppPageLayout = ({
   appTitle,
@@ -92,7 +92,7 @@ export const CAppPageLayout = ({
 
   return (
     <ThemeProvider theme={theme}>
-      <OrbcafeI18nProvider locale={locale}>
+      <OrbmobileI18nProvider locale={locale}>
         <Box
         sx={(theme) => ({
           minHeight: '100vh',
@@ -149,7 +149,7 @@ export const CAppPageLayout = ({
           </Box>
         </Box>
         </Box>
-      </OrbcafeI18nProvider>
+      </OrbmobileI18nProvider>
     </ThemeProvider>
   );
 };

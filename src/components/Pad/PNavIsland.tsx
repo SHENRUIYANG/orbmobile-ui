@@ -20,7 +20,7 @@ import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import type { TreeMenuItem } from '../Navigation-Island/tree-menu';
 import type { PNavIslandProps } from './types';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 
 const filterMenuTree = (nodes: TreeMenuItem[], term: string): TreeMenuItem[] => {
   if (!term.trim()) return nodes;
@@ -69,7 +69,7 @@ export const PNavIsland = ({
   activeHref,
   onItemSelect,
 }: PNavIslandProps) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const isPortraitViewport = useMediaQuery('(orientation: portrait)');
   const resolvedOrientation =
     orientation === 'auto' ? (isPortraitViewport ? 'portrait' : 'landscape') : orientation;

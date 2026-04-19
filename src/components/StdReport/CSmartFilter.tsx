@@ -74,7 +74,7 @@ import { CVariantManagement, type VariantMetadata } from './Components/CVariantM
 import { CVariantManager, type IVariantService } from './CVariantManager';
 import { CDateRangePicker } from '../Molecules/CDateRangePicker';
 import dayjs, { type Dayjs } from 'dayjs';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 import { useTheme } from '@mui/material/styles';
 
 // --- Types ---
@@ -178,7 +178,7 @@ const FilterInput = ({
     value: FilterValue; 
     onChange: (val: FilterValue) => void; 
 }) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [rangeAnchorEl, setRangeAnchorEl] = useState<null | HTMLElement>(null); // For number between
     
@@ -559,7 +559,7 @@ export const CSmartFilter = ({
     variantService,
     serviceUrl
 }: CSmartFilterProps) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const theme = useTheme();
     const isPhoneViewport = useMediaQuery(theme.breakpoints.down('sm'));
     // State

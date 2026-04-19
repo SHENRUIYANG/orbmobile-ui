@@ -79,7 +79,7 @@ import { useGraphInteraction } from '../GraphReport/Hooks/useGraphInteraction';
 import { CSmartFilter } from './CSmartFilter';
 import { CLayoutManager } from './CLayoutManager';
 import { CMessageBox } from '../Molecules/CMessageBox';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 
 // Hooks
 import { useCTable } from './Hooks/CTable/useCTable';
@@ -124,7 +124,7 @@ export const CTableRow: React.FC<CTableRowProps> = (props) => <TableRow {...prop
  * @param props.filterConfig - Optional configuration to enable integrated Smart Filter Bar.
  */
 export const CTable: React.FC<CTableProps> = (props) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const TABLE_FONT_SIZE = '0.85rem';
   const {
     title: titleProp,

@@ -1,4 +1,4 @@
-export type OrbcafeLocale = 'en' | 'zh' | 'fr' | 'de' | 'ja' | 'ko';
+export type OrbmobileLocale = 'en' | 'zh' | 'fr' | 'de' | 'ja' | 'ko';
 
 const en = {
   'common.cancel': 'Cancel',
@@ -232,9 +232,9 @@ const en = {
   'messageBox.cancel': 'Cancel',
 } as const;
 
-type OrbcafeMessages = Record<keyof typeof en, string>;
+type OrbmobileMessages = Record<keyof typeof en, string>;
 
-const zh: OrbcafeMessages = {
+const zh: OrbmobileMessages = {
   'common.cancel': '取消',
   'common.save': '保存',
   'common.ok': '确定',
@@ -466,7 +466,7 @@ const zh: OrbcafeMessages = {
   'messageBox.cancel': '取消',
 };
 
-const fr: OrbcafeMessages = {
+const fr: OrbmobileMessages = {
   'common.cancel': 'Annuler',
   'common.save': 'Enregistrer',
   'common.ok': 'OK',
@@ -698,7 +698,7 @@ const fr: OrbcafeMessages = {
   'messageBox.cancel': 'Annuler',
 };
 
-const de: OrbcafeMessages = {
+const de: OrbmobileMessages = {
   'common.cancel': 'Abbrechen',
   'common.save': 'Speichern',
   'common.ok': 'OK',
@@ -930,7 +930,7 @@ const de: OrbcafeMessages = {
   'messageBox.cancel': 'Abbrechen',
 };
 
-const ja: OrbcafeMessages = {
+const ja: OrbmobileMessages = {
   'common.cancel': 'キャンセル',
   'common.save': '保存',
   'common.ok': 'OK',
@@ -1162,7 +1162,7 @@ const ja: OrbcafeMessages = {
   'messageBox.cancel': 'キャンセル',
 };
 
-const ko: OrbcafeMessages = {
+const ko: OrbmobileMessages = {
   'common.cancel': '취소',
   'common.save': '저장',
   'common.ok': '확인',
@@ -1394,11 +1394,11 @@ const ko: OrbcafeMessages = {
   'messageBox.cancel': '취소',
 };
 
-export type OrbcafeMessageKey = keyof OrbcafeMessages;
-export type OrbcafeMessageParams = Record<string, string | number>;
-export type OrbcafeLocaleMessages = Record<OrbcafeMessageKey, string>;
+export type OrbmobileMessageKey = keyof OrbmobileMessages;
+export type OrbmobileMessageParams = Record<string, string | number>;
+export type OrbmobileLocaleMessages = Record<OrbmobileMessageKey, string>;
 
-export const ORBCAFE_I18N_MESSAGES: Record<OrbcafeLocale, OrbcafeLocaleMessages> = {
+export const ORBMOBILE_I18N_MESSAGES: Record<OrbmobileLocale, OrbmobileLocaleMessages> = {
   en,
   zh,
   fr,

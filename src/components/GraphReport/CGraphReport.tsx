@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import type { GraphReportConfig, GraphReportFieldMapping, GraphReportInteractionState, GraphReportModel } from './types';
 import { CGraphKpiCards } from './Components/CGraphKpiCards';
 import { CGraphCharts } from './Components/CGraphCharts';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 import { CCustomizeAgent } from '../CustomizeAgent';
 import type { CustomizeAgentSettings } from '../CustomizeAgent';
 
@@ -40,7 +40,7 @@ export const CGraphReport = ({
   interaction,
   aiAssistant,
 }: CGraphReportProps) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const [aiPrompt, setAiPrompt] = useState(aiAssistant?.defaultPrompt || '');
   const [submitting, setSubmitting] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);

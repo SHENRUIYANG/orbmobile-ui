@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 import type {
   DetailInfoAiConfig,
   DetailInfoSearchHit,
@@ -115,7 +115,7 @@ export const useDetailInfo = ({
   defaultTabId,
   ai,
 }: UseDetailInfoOptions): UseDetailInfoResult => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const [query, setQueryState] = useState('');
   const [activeTabId, setActiveTabId] = useState<string | undefined>(defaultTabId || tabs[0]?.id);
   const [searchMode, setSearchMode] = useState<DetailInfoSearchMode>('idle');

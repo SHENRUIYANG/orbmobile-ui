@@ -10,10 +10,10 @@ import Tooltip from '@mui/material/Tooltip';
 import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import UnfoldLessIcon from '@mui/icons-material/UnfoldLess';
 import { CTableHeadProps } from '../Hooks/CTable/types';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 export const CTableHead = (props: CTableHeadProps) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const { 
         onSelectAllClick, 
         order, 

@@ -25,10 +25,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { alpha, useTheme } from '@mui/material/styles';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 export const CTableToolbar = (props: any) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const theme = useTheme();
     const isPhoneViewport = useMediaQuery(theme.breakpoints.down('sm'));
     const FONT_SIZE_SMALL = '0.85rem';

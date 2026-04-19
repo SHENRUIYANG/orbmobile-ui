@@ -39,7 +39,7 @@ import {
   Search
 } from 'lucide-react'
 import { TreeMenu, TreeMenuItem } from './tree-menu'
-import { useOrbcafeI18n } from '../../i18n'
+import { useOrbmobileI18n } from '../../i18n'
 
 export interface NavigationIslandProps {
   collapsed: boolean
@@ -58,7 +58,7 @@ export const NavigationIsland: React.FC<NavigationIslandProps> = ({
   menuData = [],
   colorMode = 'light',
 }) => {
-  const { t } = useOrbcafeI18n()
+  const { t } = useOrbmobileI18n()
   const isDark = colorMode === 'dark'
   const router = useRouter()
 

@@ -1,6 +1,6 @@
 import { Box, Paper, Typography } from '@mui/material';
 import type { GraphReportKpis } from '../types';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 interface CGraphKpiCardsProps {
   kpis: GraphReportKpis;
@@ -10,7 +10,7 @@ const formatNumber = (value: number, maximumFractionDigits = 2) =>
   value.toLocaleString(undefined, { maximumFractionDigits });
 
 export const CGraphKpiCards = ({ kpis }: CGraphKpiCardsProps) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const cards = [
     { label: t('graph.kpi.totalRecords'), value: formatNumber(kpis.totalRecords, 0), color: 'text.primary' },
     { label: t('graph.kpi.totalReport'), value: formatNumber(kpis.totalReportHours), color: 'text.primary' },

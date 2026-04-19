@@ -3,7 +3,7 @@
 import { Box, Chip, Paper, Stack, Typography } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import type { CKanbanBucketProps } from '../types';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 export const CKanbanBucket = ({
   bucket,
@@ -14,7 +14,7 @@ export const CKanbanBucket = ({
   maxHeight,
   sx,
 }: CKanbanBucketProps) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
 
   return (
     <Paper

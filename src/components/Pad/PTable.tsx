@@ -41,7 +41,7 @@ import { useGraphInteraction } from '../GraphReport/Hooks/useGraphInteraction';
 import { useGraphReport } from '../GraphReport/Hooks/useGraphReport';
 import { CMessageBox } from '../Molecules/CMessageBox';
 import { useCTable } from '../StdReport/Hooks/CTable/useCTable';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 
 const getCellValue = (column: any, row: Record<string, any>) => {
   const raw = row[column.id];
@@ -153,7 +153,7 @@ const PTableSummaryPanel = ({
 };
 
 export const PTable: React.FC<PTableProps> = (props) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const theme = useTheme();
   const {
     title: titleProp,

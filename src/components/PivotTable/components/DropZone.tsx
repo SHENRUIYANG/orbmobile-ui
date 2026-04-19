@@ -3,7 +3,7 @@ import { Box, IconButton, Paper, Tooltip, Typography } from '@mui/material';
 import LayersClearIcon from '@mui/icons-material/LayersClear';
 import { useDroppable } from '@dnd-kit/core';
 import type { PivotZone } from '../pivotModel';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 interface DropZoneProps {
   zone: PivotZone;
@@ -18,7 +18,7 @@ interface DropZoneProps {
 export const DropZone: React.FC<DropZoneProps> = ({ zone, title, hint, icon, children, itemCount, onClear }) => {
   const droppableId = `container|${zone}`;
   const { isOver, setNodeRef } = useDroppable({ id: droppableId });
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
 
   return (
     <Paper

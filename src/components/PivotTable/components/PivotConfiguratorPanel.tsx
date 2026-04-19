@@ -12,7 +12,7 @@ import { DropZone } from './DropZone';
 import { FieldPaletteToken } from './FieldPaletteToken';
 import { PivotSectionCard } from './PivotSectionCard';
 import { SortableZoneToken } from './SortableZoneToken';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 const zoneIconMap: Record<AxisZone | 'values', React.ReactNode> = {
   rows: <TableRowsIcon fontSize="small" />,
@@ -54,7 +54,7 @@ export const PivotConfiguratorPanel: React.FC<PivotConfiguratorPanelProps> = ({
   renderAggregationSelect,
   getAggregationLabel,
 }) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const summary = [
     `${t('pivot.zone.rows')} ${rowFields.length}`,
     `${t('pivot.zone.columns')} ${columnFields.length}`,

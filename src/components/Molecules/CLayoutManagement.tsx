@@ -47,7 +47,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import ViewQuiltIcon from '@mui/icons-material/ViewQuilt'; // Icon for Layout
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 
 // --- Interfaces ---
 
@@ -87,7 +87,7 @@ export const CLayoutManagement: React.FC<CLayoutManagementProps> = ({
   onDelete,
   onSetDefault
 }) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   // --- State ---
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [isSaveDialogOpen, setIsSaveDialogOpen] = useState(false);

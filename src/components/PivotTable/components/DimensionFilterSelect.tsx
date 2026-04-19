@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Box, Button, Checkbox, FormControl, ListItemText, ListSubheader, MenuItem, Select, TextField } from '@mui/material';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 interface DimensionFilterSelectProps {
   options: string[];
@@ -15,7 +15,7 @@ export const DimensionFilterSelect: React.FC<DimensionFilterSelectProps> = ({
   onChange,
   minWidth = 96,
 }) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const [searchText, setSearchText] = useState('');
 
   const filteredOptions = useMemo(() => {

@@ -1,26 +1,24 @@
-'use client';
-
 import React, { createContext, useContext, useMemo } from 'react';
 import {
-  ORBCAFE_I18N_MESSAGES,
-  type OrbcafeLocale,
-  type OrbcafeMessageKey,
-  type OrbcafeMessageParams,
-  type OrbcafeLocaleMessages,
+  ORBMOBILE_I18N_MESSAGES,
+  type OrbmobileLocale,
+  type OrbmobileMessageKey,
+  type OrbmobileMessageParams,
+  type OrbmobileLocaleMessages,
 } from './messages';
 
-export interface OrbcafeI18nContextValue {
-  locale: OrbcafeLocale;
-  t: (key: OrbcafeMessageKey, params?: OrbcafeMessageParams) => string;
+export interface OrbmobileI18nContextValue {
+  locale: OrbmobileLocale;
+  t: (key: OrbmobileMessageKey, params?: OrbmobileMessageParams) => string;
 }
 
-export interface OrbcafeI18nProviderProps {
-  locale?: OrbcafeLocale;
-  messages?: Partial<Record<OrbcafeLocale, Partial<OrbcafeLocaleMessages>>>;
+export interface OrbmobileI18nProviderProps {
+  locale?: OrbmobileLocale;
+  messages?: Partial<Record<OrbmobileLocale, Partial<OrbmobileLocaleMessages>>>;
   children: React.ReactNode;
 }
 
-const interpolate = (template: string, params?: OrbcafeMessageParams): string => {
+const interpolate = (template: string, params?: OrbmobileMessageParams): string => {
   if (!params) return template;
   return template.replace(/\{(\w+)\}/g, (_, token: string) => {
     const value = params[token];
@@ -28,22 +26,22 @@ const interpolate = (template: string, params?: OrbcafeMessageParams): string =>
   });
 };
 
-const defaultContext: OrbcafeI18nContextValue = {
+const defaultContext: OrbmobileI18nContextValue = {
   locale: 'en',
-  t: (key, params) => interpolate(ORBCAFE_I18N_MESSAGES.en[key] || key, params),
+  t: (key, params) => interpolate(ORBMOBILE_I18N_MESSAGES.en[key] || key, params),
 };
 
-const OrbcafeI18nContext = createContext<OrbcafeI18nContextValue>(defaultContext);
+const OrbmobileI18nContext = createContext<OrbmobileI18nContextValue>(defaultContext);
 
-export const OrbcafeI18nProvider = ({
+export const OrbmobileI18nProvider = ({
   locale = 'en',
   messages,
   children,
-}: OrbcafeI18nProviderProps) => {
-  const value = useMemo<OrbcafeI18nContextValue>(() => {
-    const localeMessages = ORBCAFE_I18N_MESSAGES[locale] || ORBCAFE_I18N_MESSAGES.en;
+}: OrbmobileI18nProviderProps) => {
+  const value = useMemo<OrbmobileI18nContextValue>(() => {
+    const localeMessages = ORBMOBILE_I18N_MESSAGES[locale] || ORBMOBILE_I18N_MESSAGES.en;
     const localeOverrides = messages?.[locale] || {};
-    const merged = { ...ORBCAFE_I18N_MESSAGES.en, ...localeMessages, ...localeOverrides };
+    const merged = { ...ORBMOBILE_I18N_MESSAGES.en, ...localeMessages, ...localeOverrides };
 
     return {
       locale,
@@ -51,8 +49,8 @@ export const OrbcafeI18nProvider = ({
     };
   }, [locale, messages]);
 
-  return <OrbcafeI18nContext.Provider value={value}>{children}</OrbcafeI18nContext.Provider>;
+  return <OrbmobileI18nContext.Provider value={value}>{children}</OrbmobileI18nContext.Provider>;
 };
 
-export const useOrbcafeI18n = (): OrbcafeI18nContextValue => useContext(OrbcafeI18nContext);
+export const useOrbmobileI18n = (): OrbmobileI18nContextValue => useContext(OrbmobileI18nContext);
 

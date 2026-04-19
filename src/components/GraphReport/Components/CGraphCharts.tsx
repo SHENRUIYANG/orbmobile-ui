@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import type { GraphBarDatum, GraphPieDatum, GraphReportInteractionState } from '../types';
 import { CBarChart, CChartCard, CPieChart } from './charts';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 interface CGraphChartsProps {
   billableByPrimary: GraphBarDatum[];
@@ -21,7 +21,7 @@ export const CGraphCharts = ({
   statusDistribution,
   interaction,
 }: CGraphChartsProps) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   return (
     <Box
       sx={{

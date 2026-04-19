@@ -26,13 +26,13 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import type { CAppHeaderProps, CAppHeaderUserMenuItem } from '../types';
-import { useOrbcafeI18n } from '../../../i18n';
-import type { OrbcafeLocale } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
+import type { OrbmobileLocale } from '../../../i18n';
 
 const HEADER_HEIGHT = 64;
 const LIGHT_HEADER_GRADIENT = 'linear-gradient(90deg, #F5F7FA 0%, #E9EDF2 50%, #F5F7FA 100%)';
-const DEFAULT_LOCALE_OPTIONS: OrbcafeLocale[] = ['en', 'zh', 'fr', 'de', 'ja', 'ko'];
-const DEFAULT_LOCALE_LABELS: Record<OrbcafeLocale, string> = {
+const DEFAULT_LOCALE_OPTIONS: OrbmobileLocale[] = ['en', 'zh', 'fr', 'de', 'ja', 'ko'];
+const DEFAULT_LOCALE_LABELS: Record<OrbmobileLocale, string> = {
   en: 'EN',
   zh: '中文',
   fr: 'FR',
@@ -59,7 +59,7 @@ export const CAppHeader = ({
   leftSlot,
   rightSlot,
 }: CAppHeaderProps) => {
-  const { t, locale } = useOrbcafeI18n();
+  const { t, locale } = useOrbmobileI18n();
   const theme = useTheme();
   const isDark = theme.palette.mode === 'dark';
   const isCompactViewport = useMediaQuery(theme.breakpoints.down('md'));

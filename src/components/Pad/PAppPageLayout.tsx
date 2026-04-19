@@ -16,7 +16,7 @@ import type { PAppPageLayoutProps } from './types';
 import { PNavIsland } from './PNavIsland';
 import { PWorkloadNav } from './PWorkloadNav';
 import { CAppHeader } from '../PageLayout/Components/CAppHeader';
-import { OrbcafeI18nProvider } from '../../i18n';
+import { OrbmobileI18nProvider } from '../../i18n';
 
 export const PAppPageLayout = ({
   appTitle,
@@ -161,7 +161,7 @@ export const PAppPageLayout = ({
 
   return (
     <ThemeProvider theme={theme}>
-      <OrbcafeI18nProvider locale={locale}>
+      <OrbmobileI18nProvider locale={locale}>
         <Box
           sx={[
             (t) => ({
@@ -271,7 +271,7 @@ export const PAppPageLayout = ({
             </>
           ) : null}
         </Box>
-      </OrbcafeI18nProvider>
+      </OrbmobileI18nProvider>
     </ThemeProvider>
   );
 };

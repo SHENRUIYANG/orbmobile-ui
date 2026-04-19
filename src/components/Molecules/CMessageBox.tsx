@@ -43,7 +43,7 @@ import WarningIcon from '@mui/icons-material/Warning';
 import ErrorIcon from '@mui/icons-material/Error';
 import InfoIcon from '@mui/icons-material/Info';
 import { CButton } from '../Atoms/CButton';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 import { messageManager } from '../../lib/message';
 import type { CMessageBoxType, MessageEvent } from '../../lib/message';
 export type { CMessageBoxType } from '../../lib/message';
@@ -106,7 +106,7 @@ export const CMessageBox: React.FC<CMessageBoxProps> = ({
   maxWidth = 'xs',
   type = 'default',
 }) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const effectiveConfirmText = confirmText || t('messageBox.confirm');
   const effectiveCancelText = cancelText || t('messageBox.cancel');
 

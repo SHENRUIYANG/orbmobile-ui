@@ -63,8 +63,8 @@ import 'dayjs/locale/fr';
 import 'dayjs/locale/de';
 import 'dayjs/locale/ja';
 import 'dayjs/locale/ko';
-import { useOrbcafeI18n } from '../../i18n';
-import type { OrbcafeLocale } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
+import type { OrbmobileLocale } from '../../i18n';
 
 dayjs.extend(isBetween);
 dayjs.extend(localizedFormat);
@@ -77,7 +77,7 @@ interface CDateRangePickerProps {
 
 const DEFAULT_VALUE: [Dayjs | null, Dayjs | null] = [null, null];
 const FILTER_FONT_SIZE = '0.85rem';
-const DAYJS_LOCALE_MAP: Record<OrbcafeLocale, string> = {
+const DAYJS_LOCALE_MAP: Record<OrbmobileLocale, string> = {
   en: 'en',
   zh: 'zh-cn',
   fr: 'fr',
@@ -141,7 +141,7 @@ export const CDateRangePicker = ({
   value = DEFAULT_VALUE,
   onChange,
 }: CDateRangePickerProps) => {
-  const { t, locale } = useOrbcafeI18n();
+  const { t, locale } = useOrbmobileI18n();
   const dayjsLocale = DAYJS_LOCALE_MAP[locale] || 'en';
   const effectiveLabel = label || t('dateRange.label');
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);

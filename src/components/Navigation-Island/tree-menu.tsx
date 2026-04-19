@@ -38,7 +38,7 @@ import { usePathname } from 'next/navigation'
 import { ChevronRight } from 'lucide-react'
 import { cn } from '../../lib/utils'
 import { Button } from './button'
-import { useOrbcafeI18n } from '../../i18n'
+import { useOrbmobileI18n } from '../../i18n'
 
 export interface TreeMenuItem {
   id: string
@@ -72,7 +72,7 @@ export function TreeMenu({
   onToggleExpand,
   colorMode = 'light',
 }: TreeMenuProps) {
-  const { t } = useOrbcafeI18n()
+  const { t } = useOrbmobileI18n()
   const isDark = colorMode === 'dark'
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)

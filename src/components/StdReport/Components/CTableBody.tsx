@@ -5,10 +5,10 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import UnfoldLessIcon from '@mui/icons-material/UnfoldLess';
 import { CTableBodyProps } from '../Hooks/CTable/types';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 export const CTableBody = (props: CTableBodyProps) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const { 
         visibleRows, 
         visibleColumns, 

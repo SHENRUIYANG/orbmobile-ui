@@ -1,7 +1,7 @@
 import type { SxProps, Theme } from '@mui/material/styles';
 import type { ReactNode } from 'react';
 import type { TreeMenuItem } from '../Navigation-Island/tree-menu';
-import type { OrbcafeLocale } from '../../i18n';
+import type { OrbmobileLocale } from '../../i18n';
 
 export interface CAppHeaderUser {
   name: string;
@@ -23,10 +23,10 @@ export interface CAppHeaderProps {
   logo?: ReactNode;
   mode?: 'light' | 'dark' | 'system';
   onToggleMode?: () => void;
-  locale?: OrbcafeLocale;
+  locale?: OrbmobileLocale;
   localeLabel?: string;
-  localeOptions?: OrbcafeLocale[];
-  onLocaleChange?: (locale: OrbcafeLocale) => void;
+  localeOptions?: OrbmobileLocale[];
+  onLocaleChange?: (locale: OrbmobileLocale) => void;
   searchPlaceholder?: string;
   onSearch?: (query: string) => void;
   user?: CAppHeaderUser;
@@ -42,10 +42,10 @@ export interface CAppPageLayoutProps {
   menuData?: TreeMenuItem[];
   children: ReactNode;
   showNavigation?: boolean;
-  locale?: OrbcafeLocale;
+  locale?: OrbmobileLocale;
   localeLabel?: string;
-  localeOptions?: OrbcafeLocale[];
-  onLocaleChange?: (locale: OrbcafeLocale) => void;
+  localeOptions?: OrbmobileLocale[];
+  onLocaleChange?: (locale: OrbmobileLocale) => void;
   user?: CAppHeaderUser;
   onUserSetting?: () => void;
   onUserLogout?: () => void;

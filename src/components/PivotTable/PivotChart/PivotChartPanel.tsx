@@ -3,7 +3,7 @@ import { Box, FormControl, MenuItem, Select, Typography } from '@mui/material';
 import type { ValueZoneItem } from '../pivotModel';
 import type { PivotChartType, PivotFieldDefinition } from '../types';
 import { formatAggregatedValue } from '../pivotUtils';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 import { PivotSectionCard } from '../components/PivotSectionCard';
 import { PivotScatterChart } from './PivotScatterChart';
 import { PivotSeriesChart } from './PivotSeriesChart';
@@ -50,7 +50,7 @@ export const PivotChartPanel: React.FC<PivotChartPanelProps> = ({
   onToggleCollapse,
   getAggregationLabel,
 }) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
 
   const dimensionOptions = useMemo(
     () => buildPivotChartDimensionOptions(rowFields, columnFields, fieldMap),

@@ -17,7 +17,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { CVariantManagement, VariantMetadata } from './Components/CVariantManagement';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 
 export interface IVariantService {
     getVariants: (appId: string, tableKey?: string) => Promise<VariantMetadata[]>;
@@ -56,7 +56,7 @@ export const CVariantManager: React.FC<CVariantManagerProps> = ({
     currentVariantId: propCurrentVariantId,
     onVariantChange
 }) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const [variants, setVariants] = useState<VariantMetadata[]>([]);
     const [internalCurrentVariantId, setInternalCurrentVariantId] = useState<string>('');
     const storageKey = `orbcafe.variants.${appId}.${tableKey}`;

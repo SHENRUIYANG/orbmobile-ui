@@ -4,7 +4,7 @@ import { useCallback, useMemo } from 'react';
 import { Box, IconButton, Paper, Stack, Tab, Tabs, Tooltip, Typography } from '@mui/material';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { CTable } from '../StdReport/CTable';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 import { MarkdownRenderer } from '../../lib/renderer/md_renderer';
 import { CDetailSearchAiBar } from './Components/CDetailSearchAiBar';
 import { CDetailSectionCard } from './Components/CDetailSectionCard';
@@ -24,7 +24,7 @@ export const CDetailInfoPage = ({
   onClose,
   closeLabel = 'Close',
 }: CDetailInfoPageProps) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
 
   const {
     query,

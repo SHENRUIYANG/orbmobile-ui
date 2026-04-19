@@ -6,7 +6,7 @@ import BackspaceRoundedIcon from '@mui/icons-material/BackspaceRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import type { PNumericKeypadProps } from './types';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 
 interface KeypadButtonProps {
   label: string;
@@ -68,7 +68,7 @@ export const PNumericKeypad = ({
   onClose,
   sx,
 }: PNumericKeypadProps) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const [internalValue, setInternalValue] = useState(defaultValue);
   const currentValue = value ?? internalValue;
 

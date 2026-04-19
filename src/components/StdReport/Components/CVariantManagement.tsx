@@ -18,7 +18,7 @@ import {
 } from '@mui/material';
 import SaveIcon from '@mui/icons-material/Save';
 import StarIcon from '@mui/icons-material/Star';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 export interface VariantMetadata {
     id: string;
@@ -53,7 +53,7 @@ export const CVariantManagement = ({
     onDelete,
     onSetDefault
 }: CVariantManagementProps) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const theme = useTheme();
     const isDark = theme.palette.mode === 'dark';
     const isPhoneViewport = useMediaQuery(theme.breakpoints.down('sm'));

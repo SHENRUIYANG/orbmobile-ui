@@ -4,7 +4,7 @@ import type { TreeMenuItem } from '../Navigation-Island/tree-menu';
 import type { CTableProps } from '../StdReport/Hooks/CTable/types';
 import type { CSmartFilterProps } from '../StdReport/CSmartFilter';
 import type { CAppHeaderUser, CAppHeaderUserMenuItem } from '../PageLayout/types';
-import type { OrbcafeLocale } from '../../i18n';
+import type { OrbmobileLocale } from '../../i18n';
 
 export type POrientation = 'auto' | 'portrait' | 'landscape';
 
@@ -159,10 +159,10 @@ export interface PAppPageLayoutProps {
   onWorkloadSelect?: (item: PWorkloadNavItem) => void;
 
   // New props for parity with CAppPageLayout
-  locale?: OrbcafeLocale;
+  locale?: OrbmobileLocale;
   localeLabel?: string;
-  localeOptions?: OrbcafeLocale[];
-  onLocaleChange?: (locale: OrbcafeLocale) => void;
+  localeOptions?: OrbmobileLocale[];
+  onLocaleChange?: (locale: OrbmobileLocale) => void;
   onUserSetting?: () => void;
   onUserLogout?: () => void;
   userMenuItems?: CAppHeaderUserMenuItem[];

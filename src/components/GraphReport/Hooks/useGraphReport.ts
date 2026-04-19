@@ -12,7 +12,7 @@ import type {
   GraphReportModel,
   GraphRow,
 } from '../types';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 const DEFAULT_FIELD_CANDIDATES = {
   primaryDimension: ['Client', 'Customer', 'Category', 'Project'],
@@ -225,7 +225,7 @@ export interface UseGraphReportResult {
 }
 
 export const useGraphReport = ({ rows, config }: UseGraphReportOptions): UseGraphReportResult => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const unassignedLabel = t('graph.unassigned');
   const fieldMapping = useMemo<GraphReportFieldMapping>(() => {
     const mapping = config?.fieldMapping;

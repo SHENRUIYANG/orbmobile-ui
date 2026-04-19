@@ -66,7 +66,7 @@ import { PivotSectionCard } from './components/PivotSectionCard';
 import { PivotChartPanel } from './PivotChart';
 import { PivotRowRenderer } from './components/PivotRowRenderer';
 import { SortableZoneTokenUI } from './components/SortableZoneToken';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 
 const getDefaultChartDimensionFieldId = (
   rowFields: string[],
@@ -181,7 +181,7 @@ export const CPivotTable: React.FC<CPivotTableProps> = ({
   initialPresetId,
   onPresetApplied,
 }) => {
-  const { t } = useOrbcafeI18n();
+  const { t } = useOrbmobileI18n();
   const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 8 } }));
   const tokenCounterRef = useRef(0);
   const initialPresetAppliedRef = useRef(false);

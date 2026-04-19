@@ -8,7 +8,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { CLayoutManagement, LayoutMetadata } from '../Molecules/CLayoutManagement';
-import { useOrbcafeI18n } from '../../i18n';
+import { useOrbmobileI18n } from '../../i18n';
 
 export interface CLayoutManagerProps {
     appId: string;
@@ -33,7 +33,7 @@ export const CLayoutManager: React.FC<CLayoutManagerProps> = ({
     onError,
     onSuccess
 }) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     const [layouts, setLayouts] = useState<LayoutMetadata[]>([]);
     const [currentLayoutId, setCurrentLayoutId] = useState<string>('');
     const storageKey = `orbcafe.layouts.${appId}.${tableKey}`;

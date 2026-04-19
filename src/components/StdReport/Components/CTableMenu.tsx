@@ -1,7 +1,7 @@
 import { Menu, MenuItem, Checkbox, ListItemText, ListItemIcon, Divider, Switch, FormControlLabel, Box, Badge, Typography, Button } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import ClearAllIcon from '@mui/icons-material/ClearAll';
-import { useOrbcafeI18n } from '../../../i18n';
+import { useOrbmobileI18n } from '../../../i18n';
 
 // --- Types ---
 interface Column {
@@ -28,7 +28,7 @@ export const CTableGroupMenu = ({
     columns,
     toggleGroupField
 }: CTableGroupMenuProps) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     return (
         <Menu
             anchorEl={groupAnchorEl}
@@ -89,7 +89,7 @@ export const CTableColumnMenu = ({
     visibleColumns,
     toggleColumnVisibility
 }: CTableColumnMenuProps) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     return (
         <Menu
             anchorEl={anchorEl}
@@ -130,7 +130,7 @@ export const CTableSummaryMenu = ({
     summaryColumns,
     toggleSummaryColumn
 }: CTableSummaryMenuProps) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     return (
         <Menu
             anchorEl={anchorEl}
@@ -181,7 +181,7 @@ export const CTableContextMenu = ({
     visibleColumns,
     toggleColumnVisibility
 }: CTableContextMenuProps) => {
-    const { t } = useOrbcafeI18n();
+    const { t } = useOrbmobileI18n();
     return (
         <Menu
             open={contextMenu !== null}
