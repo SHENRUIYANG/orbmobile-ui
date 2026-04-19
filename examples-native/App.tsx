@@ -11,7 +11,7 @@ import { PivotTableScreen } from './src/screens/PivotTableScreen';
 import { AgentUIScreen } from './src/screens/AgentUIScreen';
 
 const linking = {
-  prefixes: ['dousha://', 'exp://127.0.0.1:8082/--', 'exp://localhost:8082/--'],
+  prefixes: ['orbmobile://', 'exp://127.0.0.1:8082/--', 'exp://localhost:8082/--'],
   config: {
     screens: {
       Home: '',
@@ -29,7 +29,7 @@ export default function App() {
     <PaperProvider>
       <NavigationContainer linking={linking}>
         <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'DoushaBao Native' }} />
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'OrbMobile UI' }} />
           <Stack.Screen name="Pad" component={PadScreen} options={{ headerShown: false }} />
           <Stack.Screen name="StdReport" component={StdReportScreen} options={{ title: 'Standard Report' }} />
           <Stack.Screen name="Kanban" component={KanbanScreen} options={{ title: 'Kanban Board' }} />

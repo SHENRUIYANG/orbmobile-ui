@@ -1,11 +1,1 @@
-export * from './CStandardPage';
-export * from './CSmartFilter';
-export * from './CTable';
-export * from './CLayoutManager';
-export * from './CVariantManager';
-export * from './Structures/CPageLayout';
-export * from './Components/CVariantManagement';
-export * from '../Molecules/CLayoutManagement';
-export * from './Hooks/CTable/types';
-export * from './Hooks/useStandardReport';
-export * from './Utils/variantUtils';
+export { CStandardPage, type CStandardPageProps } from './CStandardPage';

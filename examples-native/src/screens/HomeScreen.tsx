@@ -4,7 +4,7 @@ import { Surface, Text, Button, Chip } from 'react-native-paper';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { DEMO_CATALOG } from '../config/demoCatalog';
 import type { RootStackParamList } from '../navigation/types';
-import { getDoushaDemoBaseUrl } from 'doushabao-ui-native';
+import { getOrbmobileBaseUrl } from 'orbmobile-ui';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -13,19 +13,20 @@ interface HomeScreenProps {
 }
 
 export function HomeScreen({ navigation }: HomeScreenProps) {
-  const baseUrl = getDoushaDemoBaseUrl();
+  const baseUrl = getOrbmobileBaseUrl();
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
       <View style={styles.hero}>
         <Text variant="displaySmall" style={styles.title}>
-          DoushaBao UI Native
+          OrbMobile UI
         </Text>
         <Text variant="titleMedium" style={styles.subtitle}>
-          Rebuilt as a native shell around the original ORBCAFE examples app.
+          React Native companion for orbcafe-ui — touch-optimised components
+          and WebView bridges.
         </Text>
         <Chip icon="web" compact>
-          examples server: {baseUrl}
+          web server: {baseUrl}
         </Chip>
       </View>
 
