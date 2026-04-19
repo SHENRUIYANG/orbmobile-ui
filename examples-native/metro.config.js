@@ -25,12 +25,6 @@ config.resolver.extraNodeModules = {
   'react-native': path.resolve(appNodeModules, 'react-native'),
   'react-native-paper': path.resolve(appNodeModules, 'react-native-paper'),
   'react-native-webview': path.resolve(appNodeModules, 'react-native-webview'),
-  '@react-native-community/datetimepicker': path.resolve(
-    appNodeModules,
-    '@react-native-community/datetimepicker'
-  ),
-  dayjs: path.resolve(appNodeModules, 'dayjs'),
-  'lucide-react-native': path.resolve(appNodeModules, 'lucide-react-native'),
   'orbmobile-ui': path.resolve(workspaceRoot, 'src'),
 };
 
