@@ -23,7 +23,7 @@ orbmobile-ui/
 │       ├── Kanban/             # Kanban Board (WebView bridge)
 │       ├── PivotTable/         # Pivot Table (WebView bridge)
 │       ├── AgentUI/            # Agent Chat UI (WebView bridge)
-│       └── Pad/                # Native touch-optimised pad components
+│       └── Pad/                # Native touch-optimized pad components
 └── examples-native/            # Expo demo app
 ```
 
@@ -32,7 +32,7 @@ orbmobile-ui/
 | Category | Rendering | Rationale |
 |---|---|---|
 | **Atoms & Molecules** | Pure React Native | Simple UI elements that are easy and performant to implement natively. |
-| **Pad** | Pure React Native | Touch-optimised components that **must** be native for gesture performance. |
+| **Pad** | Pure React Native | Touch-optimized components that **must** be native for gesture performance. |
 | **StdReport, Kanban, PivotTable, AgentUI** | WebView bridge | Complex components with heavy web dependencies (drag-and-drop, markdown, charts). The WebView loads the corresponding orbcafe-ui page from a web server. |
 
 ---

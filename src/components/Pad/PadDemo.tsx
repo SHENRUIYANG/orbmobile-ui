@@ -47,7 +47,7 @@ export const PadDemo: React.FC<PadDemoProps> = ({ testID, style }) => {
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Pad Cockpit</Text>
-        <Text style={styles.headerSubtitle}>Touch-optimised warehouse view</Text>
+        <Text style={styles.headerSubtitle}>Touch-optimized warehouse view</Text>
       </View>
 
       {/* Workload cards */}

@@ -20,7 +20,7 @@ export const DEMO_CATALOG: DemoCatalogItem[] = [
     route: 'StdReport',
     title: 'Standard Report',
     subtitle: 'CStandardPage via WebView',
-    detail: 'Loads the orbcafe-ui standard report page inside a WebView so table behaviour stays identical.',
+    detail: 'Loads the orbcafe-ui standard report page inside a WebView so table behavior stays identical.',
     path: '/std-report',
   },
   {
@@ -41,7 +41,7 @@ export const DEMO_CATALOG: DemoCatalogItem[] = [
     route: 'AgentUI',
     title: 'Agent UI',
     subtitle: 'Chat via WebView',
-    detail: 'Loads the orbcafe-ui chat page via WebView to keep markdown and card behaviour consistent.',
+    detail: 'Loads the orbcafe-ui chat page via WebView to keep markdown and card behavior consistent.',
     path: '/chat',
   },
 ];

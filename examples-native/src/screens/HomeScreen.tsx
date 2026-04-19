@@ -22,7 +22,7 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
           OrbMobile UI
         </Text>
         <Text variant="titleMedium" style={styles.subtitle}>
-          React Native companion for orbcafe-ui — touch-optimised components
+          React Native companion for orbcafe-ui — touch-optimized components
           and WebView bridges.
         </Text>
         <Chip icon="web" compact>

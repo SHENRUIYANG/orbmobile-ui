@@ -17,7 +17,8 @@ let _baseUrl = 'http://localhost:3000';
  * ```
  */
 export function setOrbmobileBaseUrl(url: string): void {
-  _baseUrl = url.replace(/\/+$/, '');
+  // Remove a single trailing slash if present.
+  _baseUrl = url.endsWith('/') ? url.slice(0, -1) : url;
 }
 
 /**
