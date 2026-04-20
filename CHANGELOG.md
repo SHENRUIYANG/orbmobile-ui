@@ -2,6 +2,8 @@
 
 All notable changes to `orbmobile-ui` are documented in this file.
 
+Project codename: `DOUSHABAO` (`豆沙包`).
+
 ## [0.1.0] - 2026-04-19
 
 ### 🎉 Initial Release — React Native UI Library

@@ -6,6 +6,8 @@ This folder follows a layered structure:
 - `Molecules/`: reusable composites such as table/filter surfaces that are reused by higher-level scenes
 - scenario folders such as `StdReport/`, `Pad/`, `Kanban/`, and `AgentUI/`: integrated components for a specific product surface
 
+Within the project, this component library is also referred to by the codename `DOUSHABAO` (`豆沙包`).
+
 ## Rule of thumb
 
 - If a piece is generic and can be reused anywhere, it belongs in `Atoms/` or `Molecules/`

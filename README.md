@@ -1,8 +1,14 @@
-# orbmobile-ui
+# DOUSHABAO
 
-React Native UI component library — the mobile sibling of [orbcafe-ui](https://github.com/SHENRUIYANG/orbcafe-ui) (web).
+<p align="center">
+  <img src="./assets/doushabao-logo.svg" alt="DOUSHABAO logo" width="180" />
+</p>
 
-Both libraries share the same visual identity and component vocabulary, but **orbmobile-ui** targets React Native / Expo apps while **orbcafe-ui** targets React / Next.js web apps.
+`DOUSHABAO` (`豆沙包`) is the codename for `orbmobile-ui`, the React Native UI component library and mobile sibling of [orbcafe-ui](https://github.com/SHENRUIYANG/orbcafe-ui) (web).
+
+Both libraries share the same visual identity and component vocabulary, but **DOUSHABAO / orbmobile-ui** targets React Native / Expo apps while **orbcafe-ui** targets React / Next.js web apps.
+
+The codename is used for product identity and documentation. The current package name and import path remain `orbmobile-ui`.
 
 ---
 
@@ -44,6 +50,12 @@ npm install orbmobile-ui
 # or
 yarn add orbmobile-ui
 ```
+
+Publishing note:
+
+- Project codename: `DOUSHABAO`
+- Current package name: `orbmobile-ui`
+- You can publish to a new npm package later without changing the internal library structure first
 
 ### Peer Dependencies
 
@@ -216,7 +228,7 @@ These tokens mirror the orbcafe-ui visual identity but are expressed as React Na
 
 ## Relationship with orbcafe-ui
 
-| | orbcafe-ui (web) | orbmobile-ui (mobile) |
+| | orbcafe-ui (web) | DOUSHABAO / orbmobile-ui (mobile) |
 |---|---|---|
 | **Platform** | React / Next.js | React Native / Expo |
 | **Styling** | Tailwind CSS + MUI | React Native StyleSheet |

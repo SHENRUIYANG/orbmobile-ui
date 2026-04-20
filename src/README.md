@@ -1,6 +1,6 @@
 # Source
 
-`src/` is the library source for `orbmobile-ui`.
+`src/` is the library source for `orbmobile-ui`, whose project codename is `DOUSHABAO` (`豆沙包`).
 
 ## Structure
 
