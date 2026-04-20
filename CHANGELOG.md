@@ -18,18 +18,14 @@ and the WebView bridge pattern for complex UIs.
   `MDivider`, `MSurface` — pure React Native building blocks.
 - **Molecules**: `MMessageBox` (modal dialog), `MStatusBadge` (status indicator).
 - **Pad components** (native touch-optimised):
-  - `PadDemo` — self-contained pad cockpit demo
-  - `PNumericKeypad` — touch-friendly numeric keypad
-  - `PTable` — card-based touch table
-  - `PSmartFilter` — horizontally scrollable filter bar
+  - `MNumericKeypad` — touch-friendly numeric keypad
   - `usePadLayout` — orientation detection hook
 - **WebView bridge**:
   - `OrbWebView` — generic WebView wrapper for orbcafe-ui pages
   - `setOrbmobileBaseUrl()` / `getOrbmobileBaseUrl()` — runtime URL configuration
-  - `CStandardPage` — Standard Report (WebView bridge to `/std-report`)
-  - `CKanbanBoard` — Kanban Board (WebView bridge to `/kanban`)
-  - `CPivotTable` — Pivot Table (WebView bridge to `/pivot-table`)
-  - `AgentUI` — Agent Chat UI (WebView bridge to `/chat`)
+  - `MAgentUI` — Agent Chat UI (WebView bridge to `/chat`)
+- **Native business surfaces**:
+  - `MKanbanBoard` — native Kanban board for touch-first mobile layouts
 - **i18n**: Full 6-locale support (`en`, `zh`, `fr`, `de`, `ja`, `ko`) with
   `OrbmobileI18nProvider` and `useOrbmobileI18n()` hook.
 - **Design tokens**: `BRAND_COLORS`, `SPACING`, `RADIUS`, `FONT_SIZE`,

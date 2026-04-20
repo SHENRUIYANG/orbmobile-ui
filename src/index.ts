@@ -20,9 +20,6 @@ export * from './components/StdReport';
 // ── Kanban ─────────────────────────────────────────────────────────────
 export * from './components/Kanban';
 
-// ── Pivot Table ────────────────────────────────────────────────────────
-export * from './components/PivotTable';
-
 // ── Agent UI ───────────────────────────────────────────────────────────
 export * from './components/AgentUI';
 

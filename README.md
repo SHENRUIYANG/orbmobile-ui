@@ -19,9 +19,8 @@ orbmobile-ui/
 │       ├── Atoms/              # Basic building blocks (Button, TextField, …)
 │       ├── Molecules/          # Composite components (MessageBox, StatusBadge)
 │       ├── WebViewBridge/      # Generic WebView wrapper for orbcafe-ui pages
-│       ├── StdReport/          # Standard Report (WebView bridge)
-│       ├── Kanban/             # Kanban Board (WebView bridge)
-│       ├── PivotTable/         # Pivot Table (WebView bridge)
+│       ├── StdReport/          # Standard Report (native composition)
+│       ├── Kanban/             # Kanban Board (native composition)
 │       ├── AgentUI/            # Agent Chat UI (WebView bridge)
 │       └── Pad/                # Native touch-optimized pad components
 └── examples-native/            # Expo demo app
@@ -33,7 +32,8 @@ orbmobile-ui/
 |---|---|---|
 | **Atoms & Molecules** | Pure React Native | Simple UI elements that are easy and performant to implement natively. |
 | **Pad** | Pure React Native | Touch-optimized components that **must** be native for gesture performance. |
-| **StdReport, Kanban, PivotTable, AgentUI** | WebView bridge | Complex components with heavy web dependencies (drag-and-drop, markdown, charts). The WebView loads the corresponding orbcafe-ui page from a web server. |
+| **StdReport, Kanban** | Pure React Native | Native mobile compositions optimized for touch layouts and local app state. |
+| **MAgentUI** | WebView bridge | Complex chat UI with heavy web dependencies. The WebView loads the corresponding orbcafe-ui page from a web server. |
 
 ---
 
@@ -51,7 +51,7 @@ yarn add orbmobile-ui
 |---|---|---|
 | `react` ≥ 18 | ✅ Yes | Core |
 | `react-native` ≥ 0.72 | ✅ Yes | Core |
-| `react-native-webview` ≥ 13 | Optional | Required only if you use WebView-bridged components (StdReport, Kanban, PivotTable, AgentUI) |
+| `react-native-webview` ≥ 13 | Optional | Required only if you use WebView-bridged components (`MAgentUI` or `OrbWebView`) |
 
 ---
 
@@ -60,7 +60,7 @@ yarn add orbmobile-ui
 ### 1. Native-only components (no WebView needed)
 
 ```tsx
-import { MButton, MMessageBox, PNumericKeypad } from 'orbmobile-ui';
+import { MButton, MMessageBox, MNumericKeypad } from 'orbmobile-ui';
 
 function MyScreen() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -80,7 +80,7 @@ function MyScreen() {
         onClose={() => setDialogOpen(false)}
       />
 
-      <PNumericKeypad
+      <MNumericKeypad
         onSubmit={(value) => console.log('Entered:', value)}
       />
     </View>
@@ -102,12 +102,34 @@ setOrbmobileBaseUrl('https://your-orbcafe-app.example.com');
 Then use the component:
 
 ```tsx
-import { CStandardPage, CKanbanBoard, AgentUI } from 'orbmobile-ui';
+import { MAgentUI } from 'orbmobile-ui';
 
-// Each renders a full-screen WebView loading the corresponding orbcafe-ui page
-<CStandardPage />
-<CKanbanBoard />
-<AgentUI />
+// Renders a full-screen WebView loading the corresponding orbcafe-ui page
+<MAgentUI />
+```
+
+### 3. Native business surfaces
+
+```tsx
+import { MStandardPage, MKanbanBoard, type MKanbanBucketData } from 'orbmobile-ui';
+
+const buckets: MKanbanBucketData[] = [
+  {
+    id: 'backlog',
+    title: 'Backlog',
+    cards: [{ id: 'task-1', title: 'Review replenishment plan' }],
+  },
+  {
+    id: 'done',
+    title: 'Done',
+    cardStatus: 'success',
+    cardStatusLabel: 'Done',
+    cards: [],
+  },
+];
+
+<MStandardPage appId="demo" tableKey="orders" title="Sales Orders" columns={[]} filters={[]} data={[]} />
+<MKanbanBoard title="KANBAN BOARD" buckets={buckets} />
 ```
 
 ---
@@ -137,21 +159,23 @@ import { CStandardPage, CKanbanBoard, AgentUI } from 'orbmobile-ui';
 
 | Component | Description |
 |---|---|
-| `PadDemo` | Self-contained pad cockpit demo with workload cards |
-| `PNumericKeypad` | Touch-friendly numeric keypad for data entry |
-| `PTable` | Card-based touch table with per-row tap handling |
-| `PSmartFilter` | Horizontally scrollable filter bar |
+| `MNumericKeypad` | Touch-friendly numeric keypad for data entry |
 | `usePadLayout` | Hook for orientation detection and adaptive layout |
 
 ### WebView Bridges
 
 | Component | Web Path | Description |
 |---|---|---|
-| `CStandardPage` | `/std-report` | Standard Report with table, filtering, pagination |
-| `CKanbanBoard` | `/kanban` | Kanban Board with drag-and-drop |
-| `CPivotTable` | `/pivot-table` | Pivot Table with chart rendering |
-| `AgentUI` | `/chat` | AI Chat with markdown and card rendering |
+| `MAgentUI` | `/chat` | AI Chat with markdown and card rendering |
 | `OrbWebView` | *(custom)* | Generic WebView wrapper — use for any custom page |
+
+### Native Kanban
+
+| Component | Description |
+|---|---|
+| `MKanbanBoard` | Native bucket board for phone and pad layouts with touch-friendly task cards |
+
+`MKanbanBoard` accepts local `buckets` data, supports moving cards to any bucket via the built-in selector, and keeps each bucket vertically scrollable while the full board scrolls horizontally.
 
 ---
 

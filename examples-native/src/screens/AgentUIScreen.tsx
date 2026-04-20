@@ -1,6 +1,6 @@
 import React from 'react';
-import { AgentUI } from 'orbmobile-ui';
+import { MAgentUI } from 'orbmobile-ui';
 
 export function AgentUIScreen() {
-  return <AgentUI testID="agent-ui-screen" />;
+  return <MAgentUI testID="agent-ui-screen" />;
 }

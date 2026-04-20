@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { BRAND_COLORS, RADIUS, FONT_SIZE, SPACING, SHADOWS } from '../../config/foundations';
 
-export interface PNumericKeypadProps {
+export interface MNumericKeypadProps {
   /** Called with the current accumulated value whenever a key is pressed */
   onValueChange?: (value: string) => void;
   /** Called when the user presses Enter / ✓ */
@@ -35,10 +35,10 @@ const KEYS = [
 /**
  * Touch-friendly numeric keypad for tablet/mobile data-entry scenarios.
  *
- * Mirrors the orbcafe-ui `PNumericKeypad` component but is implemented as a
+ * Mirrors the orbcafe-ui `MNumericKeypad` component but is implemented as a
  * pure React Native component with large touch targets.
  */
-export const PNumericKeypad: React.FC<PNumericKeypadProps> = ({
+export const MNumericKeypad: React.FC<MNumericKeypadProps> = ({
   onValueChange,
   onSubmit,
   initialValue = '',

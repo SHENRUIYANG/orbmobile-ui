@@ -1,1 +1,1 @@
-export { AgentUI, type AgentUIProps } from './AgentUI';
+export { MAgentUI, type MAgentUIProps } from './AgentUI';

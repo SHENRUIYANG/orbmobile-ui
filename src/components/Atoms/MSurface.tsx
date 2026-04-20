@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, type ViewStyle } from 'react-native';
+import { View, StyleSheet, type StyleProp, type ViewStyle } from 'react-native';
 import { BRAND_COLORS, RADIUS, SHADOWS, SPACING } from '../../config/foundations';
 
 export interface MSurfaceProps {
@@ -7,7 +7,7 @@ export interface MSurfaceProps {
   /** Elevation level */
   elevation?: 'sm' | 'md' | 'lg';
   /** Custom style */
-  style?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
 }
 
 export const MSurface: React.FC<MSurfaceProps> = ({
